@@ -1,0 +1,23 @@
+body{	
+	background: #DAD299; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #DAD299 , #B0DAB9); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #DAD299 , #B0DAB9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
+}
+
+header{
+	margin: 2em;
+	padding-bottom: 4em;
+}
+
+btn#wiki-rndm.btn.btn-secondary,  /****   NOT WORKING... :(  ****/
+btn#wiki-srch.btn.btn-secondary{
+	background-color: #6fc6a2;
+}
+
+#search-results{
+	margin-top: 5em;
+}
+
+div.wiki-results{
+	margin: 0 4em;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Local Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="wiki.css">
+	<!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">    
+	<title>FCC Wikipedia Viewer</title>
+</head>
+<body>
+
+	<div class = "container">
+		<header class = "row text-center">
+			<h1>Oh Great Wikipedia </h1>
+			<h2> Drop Some Questionable Knowledge On Me!</h2>
+		</header>
+		<!-- USER SEARCH FORM -->
+		<div class="row search"> 
+		  <div class="col-lg-offset-3 col-lg-6">
+		    <div class="input-group">
+		      <span class="input-group-btn">
+		        <button id = "wiki-rndm" class="btn btn-secondary" type="button">Feeling Wacky</button>
+		      </span>
+		      <input id = "wiki-inpt" type="text" class="form-control" placeholder="" aria-label="Search Wikipedia">
+		      <span class="input-group-btn">
+		        <button id = "wiki-srch" class="btn btn-secondary" type="button">Wiki Search</button>
+		      </span>
+		    </div>
+		  </div>
+		</div>
+		<!-- DISPLAY RESULTS LIST DYNAMINICLY CREATED -->
+		<div id = "search-results" class = "row text-center">
+		</div>	
+
+	</div>
+
+<!-- jQuery -->
+<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<!-- local script -->
+<script type="text/javascript" src = "wiki.js"></script>
+</body>
+</html>
