@@ -1,7 +1,6 @@
 
 $( document ).ready(function() {
-    $("wiki-inpt").keypress(function(e){
-    	console.log(e.keyCode);
+    $("#wiki-inpt").keypress(function(e){
       if(e.keyCode===13)
       $('#wiki-srch').click();
     });
@@ -12,7 +11,7 @@ $( document ).ready(function() {
     	$("#search-results").html('');
 		$("<iframe>", {
 		   src: 'https://en.wikipedia.org/wiki/Special:Random',
-		   // class:  'embed-responsive',
+		   class:  'wiki-results',
 		   width:"800px",
 		   height:"1000px",
 		   scrolling: 'yes'
@@ -34,7 +33,6 @@ function searchWiki(){
 				"&pilimit=max",
 				"&wbptterms=description"];
 	var api = apiArray.join('');
-	console.log("wikiJSON: "+api);
 	$.ajax({
 	    url: api,
 	    dataType: 'jsonp', //jsonfm for debugging purposes. Change back to json when time to launch
@@ -48,12 +46,11 @@ function searchWiki(){
 }// close searchWiki
 
 function displayWiki(data){
-	console.log(data);
 	$("#search-results").html('');
 	//start at 1 to avoid displaying search query
 	for (var i=1; i<data[1].length; i++){
 		// create div
-        $("#search-results").append("<div class = 'wiki-results text-left'>"
+        $("#search-results").append("<div class = 'wiki-results well well-lg'>"
         	//start link
         	+"<a href='"+data[3][i]+"' target='_blank' >"
         	//title
