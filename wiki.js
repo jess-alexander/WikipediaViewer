@@ -1,8 +1,7 @@
 
 $( document ).ready(function() {
-    console.log( "ready!" );
-
     $("wiki-inpt").keypress(function(e){
+    	console.log(e.keyCode);
       if(e.keyCode===13)
       $('#wiki-srch').click();
     });
@@ -18,7 +17,6 @@ $( document ).ready(function() {
 		   height:"1000px",
 		   scrolling: 'yes'
 		   }).appendTo("#search-results");
-
     });
     
 });
@@ -26,7 +24,7 @@ $( document ).ready(function() {
 
 function searchWiki(){
 	var search = $("#wiki-inpt").val().split(' ').join('%20');
-	var apiArray = ["https://en.wikipedia.org/w/api.php?",
+	var apiArray = ["https://en.wikipedia.org/w/api.php?",  //separated for easy readability
 				"action=opensearch",
 				"&formatversion=2",
 				"&format=json",
